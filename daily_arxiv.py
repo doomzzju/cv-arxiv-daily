@@ -218,12 +218,15 @@ def update_json_file(filename,data_dict):
     '''
     daily update json file using data_dict
     '''
-    with open(filename,"r") as f:
-        content = f.read()
-        if not content:
-            m = {}
-        else:
-            m = json.loads(content)
+    try:
+        with open(filename,"r") as f:
+            content = f.read()
+            if not content:
+                m = {}
+            else:
+                m = json.loads(content)
+    except:
+        m = {}
 
     json_data = m.copy()
 
