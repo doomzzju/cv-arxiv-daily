@@ -16,6 +16,22 @@ base_url = "https://arxiv.paperswithcode.com/api/v0/papers/"
 github_url = "https://api.github.com/search/repositories"
 arxiv_url = "http://arxiv.org/"
 
+def get_github_star_count(owner, repo):
+    url = f"https://api.github.com/repos/{owner}/{repo}"
+    headers = {
+        "Accept": "application/vnd.github.v3+json",
+        "Authorization": "Bearer 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"
+    }
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        data = response.json()
+        return data["stargazers_count"]
+    else:
+        print(f"Failed to fetch data: {response.status_code}")
+        return None
+
 def load_config(config_file:str) -> dict:
     '''
     config_file: input config file path
@@ -93,6 +109,7 @@ def get_daily_papers(topic,query="slam", max_results=2):
     # output
     content = dict()
     content_to_web = dict()
+    content_star = dict()
     search_engine = arxiv.Search(
         query = query,
         max_results = max_results,
@@ -140,6 +157,14 @@ def get_daily_papers(topic,query="slam", max_results=2):
                 content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({}), Code: **[{}]({})**".format(
                        update_time,paper_title,paper_first_author,paper_url,paper_url,repo_url,repo_url)
 
+                owner = repo_url.split("/")[-2]
+                repo = repo_url.split("/")[-1]
+                star_count = get_github_star_count(owner, repo)
+                if star_count is not None:
+                    content_star[paper_key] = star_count
+                else:
+                    content_star[paper_key] = 0
+
             #else:
             #    content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|\n".format(
             #           update_time,paper_title,paper_first_author,paper_key,paper_url)
@@ -156,8 +181,17 @@ def get_daily_papers(topic,query="slam", max_results=2):
         except Exception as e:
             logging.error(f"exception: {e} with id: {paper_key}")
 
-    data = {topic:content}
-    data_web = {topic:content_to_web}
+    # Sort content_star by star count in descending order
+    sorted_content_star = sorted(content_star.items(), key=lambda x: x[1], reverse=True)
+
+    # Reorganize content and content_to_web based on sorted_content_star
+    sorted_content = {k: content[k] for k, _ in sorted_content_star}
+    sorted_content_to_web = {k: content_to_web[k] for k, _ in sorted_content_star}
+
+    # data = {topic:content}
+    # data_web = {topic:content_to_web}
+    data = {topic:sorted_content}
+    data_web = {topic:sorted_content_to_web}
     return data,data_web
 
 def update_paper_links(filename):
