@@ -20,7 +20,7 @@ def get_github_star_count(owner, repo):
     url = f"https://api.github.com/repos/{owner}/{repo}"
     headers = {
         "Accept": "application/vnd.github.v3+json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer "
     }
     
     response = requests.get(url, headers=headers)
