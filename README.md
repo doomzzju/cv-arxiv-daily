@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.29
+## Updated on 2024.12.30
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -856,7 +856,7 @@
 |**2019-08-26**|**Semantic 3D Reconstruction with Continuous Regularization and Ray Potentials Using a Visibility Consistency Constraint**|Nikolay Savinov et.al.|[1604.02885](http://arxiv.org/abs/1604.02885)|**[link](https://github.com/nsavinov/ray_potentials)**|
 |**2017-04-10**|**SMASH: Physics-guided Reconstruction of Collisions from Videos**|Aron Monszpart et.al.|[1603.08984](http://arxiv.org/abs/1603.08984)|**[link](https://github.com/amonszpart/SMASH)**|
 
-<p align=right>(<a href=#updated-on-20241229>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20241230>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
