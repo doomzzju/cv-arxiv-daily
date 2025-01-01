@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-## Updated on 2024.12.31
+## Updated on 2025.01.01
 > Usage instructions: [here](./docs/README.md#usage)
 
 <details>
@@ -856,8 +856,10 @@
 |**2019-08-26**|**Semantic 3D Reconstruction with Continuous Regularization and Ray Potentials Using a Visibility Consistency Constraint**|Nikolay Savinov et.al.|[1604.02885](http://arxiv.org/abs/1604.02885)|**[link](https://github.com/nsavinov/ray_potentials)**|
 |**2017-04-10**|**SMASH: Physics-guided Reconstruction of Collisions from Videos**|Aron Monszpart et.al.|[1603.08984](http://arxiv.org/abs/1603.08984)|**[link](https://github.com/amonszpart/SMASH)**|
 |**2024-12-26**|**Generating Editable Head Avatars with 3D Gaussian GANs**|Guohao Li et.al.|[2412.19149](http://arxiv.org/abs/2412.19149)|**[link](https://github.com/liguohao96/egg3d)**|
+|**2024-12-28**|**GSplatLoc: Ultra-Precise Camera Localization via 3D Gaussian Splatting**|Atticus J. Zeller et.al.|[2412.20056](http://arxiv.org/abs/2412.20056)|**[link](https://github.com/atticuszeller/gsplatloc)**|
+|**2024-12-28**|**DEGSTalk: Decomposed Per-Embedding Gaussian Fields for Hair-Preserving Talking Face Synthesis**|Kaijun Deng et.al.|[2412.20148](http://arxiv.org/abs/2412.20148)|**[link](https://github.com/cvi-szu/degstalk)**|
 
-<p align=right>(<a href=#updated-on-20241231>back to top</a>)</p>
+<p align=right>(<a href=#updated-on-20250101>back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/Vincentqyw/cv-arxiv-daily.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vincentqyw/cv-arxiv-daily/graphs/contributors
