@@ -187,10 +187,10 @@ def get_daily_papers(topic,query="slam", max_results=2):
     sorted_content = {k: content[k] for k, _ in sorted_content_star}
     sorted_content_to_web = {k: content_to_web[k] for k, _ in sorted_content_star}
 
-    # data = {topic:content}
-    # data_web = {topic:content_to_web}
-    data = {topic:sorted_content}
-    data_web = {topic:sorted_content_to_web}
+    data = {topic:content}
+    data_web = {topic:content_to_web}
+    # data = {topic:sorted_content}
+    # data_web = {topic:sorted_content_to_web}
     return data,data_web
 
 def update_paper_links(filename):
@@ -368,7 +368,7 @@ def json_to_md(filename,md_filename,
                     f.write("|:---------|:-----------------------|:---------|:------|:------|\n")
 
             # sort papers by date
-            #day_content = sort_papers(day_content)
+            day_content = sort_papers(day_content)
 
             for _,v in day_content.items():
                 if v is not None:
