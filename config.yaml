@@ -22,8 +22,8 @@ md_wechat_path: './docs/wechat.md'
 
 # keywords to search
 keywords:
-    #"NVS":
-    #    filters: ["Novel View Synthesis"]
+    "NVS":
+        filters: ["Novel View Synthesis"]
     "3DGS":
         filters: ["Gaussian Splatting", "3D Reconstruction"]
     #"SLAM": 
