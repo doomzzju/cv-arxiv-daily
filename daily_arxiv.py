@@ -164,11 +164,11 @@ def get_daily_papers(topic,query="slam", max_results=2):
                 else:
                     content_star[paper_key] = 0
 
-            #else:
-            #    content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|\n".format(
-            #           update_time,paper_title,paper_first_author,paper_key,paper_url)
-            #    content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
-            #           update_time,paper_title,paper_first_author,paper_url,paper_url)
+            else:
+                content[paper_key] = "|**{}**|**{}**|{} et.al.|[{}]({})|null|\n".format(
+                       update_time,paper_title,paper_first_author,paper_key,paper_url)
+                content_to_web[paper_key] = "- {}, **{}**, {} et.al., Paper: [{}]({})".format(
+                       update_time,paper_title,paper_first_author,paper_url,paper_url)
 
             # TODO: select useful comments
             comments = None
