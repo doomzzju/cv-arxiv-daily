@@ -23,7 +23,7 @@ md_wechat_path: './docs/wechat.md'
 # keywords to search
 keywords:
     "3DGS":
-        filters: ["Gaussian Splatting", "3D Reconstruction", "3D Gaussian Splatting"]
+        filters: ["Gaussian Splatting", "3D Reconstruction", "3D Gaussian Splatting", "Novel View Synthesis"]
     #"SLAM": 
     #    filters: ["SLAM", "Visual Odometry"]
     #"SFM":
